@@ -1,0 +1,114 @@
+
+
+<!--Framework-->
+
+<!--
+        Background
+        Encapsulating box
+        Category selector / dropdown
+        Question Topic
+        Question
+        4x radio buttons
+        Solution button
+        Score tracker
+        Incorrect/correct answer output
+    Correct answer explanation
+        Next Question button? 
+-->
+
+<!--New Question input-->
+
+<!--
+        Input for category
+        Input box for question topic
+        Input box for question
+        4x comma seperated multiple choice answers
+        Correct answer input
+    Explanation input
+        Submit button
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+</head>
+<body>
+    <div id="main-background">
+        <div id="quiz-box">
+
+            <h1>Coding Quiz</h1>
+
+            <fieldset><div id="dropdown">
+                <label for="subject"><h3>Select Subject</h3></label>
+
+                <select name="subject" id="subject">
+                    <option value="#">Subject1</option>
+                    <option value="#">Subject2</option>
+                    <option value="#">Subject3</option>
+                    <option value="#">Subject4</option>
+                </select>
+            </div>
+            </fieldset>
+            
+
+            <div id="question-topic">
+                <h2>Question Topic Place Holder</h2>
+            </div>
+
+            <form>
+                <fieldset>
+                    <legend>Topic Question</legend>
+                    <div id="radio-questions">
+                        <input type="radio" id="choice-1" name="option" value="a">
+                        <label for="'choice-1">choice-1</label>
+                        <br></br>
+                        <input type="radio" id="choice-2" name="option" value="b">
+                        <label for="'choice-2">choice-2</label>
+                        <br></br>
+                        <input type="radio" id="choice-3" name="option" value="c">
+                        <label for="'choice-3">choice-3</label>
+                        <br></br>
+                        <input type="radio" id="choice-4" name="option" value="d">
+                        <label for="'choice-4">choice-4</label>
+                        <br></br>
+                    </div>
+
+                    <div id="question-submit">
+                        <button id="submit-button" type="submit">Submit</button>
+                    <div>
+
+                    <div id="user-score">
+                        <h3>Your score is: #</h3>
+                    </div>
+
+                    <div id="output-message">
+                        <h4>Correct/Incorrect</h4>
+                    </div>
+
+                    <button id="next-question">Next Question</button>
+                </fieldset>
+            </form>
+
+            <div id="new-question">
+                <h2>Add Question</h2>
+                <fieldset>
+                    <div id="input-question">
+                        <input id="new-subject"> Enter Subject<br></br>
+                        <input id="add-question"> Enter Question<br></br>
+                        <input id="A"> A<br></br>
+                        <input id="B"> B<br></br>
+                        <input id="C"> C<br></br>
+                        <input id="D"> D<br></br>
+                        <input id="new-correct-answer"> Correct Answer<br></br>
+                    </div>
+                    <button>Submit New Question</button>
+                </fieldset>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
