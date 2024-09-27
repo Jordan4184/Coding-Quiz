@@ -32,7 +32,6 @@ class Question {
 }
 
 
-
 let correctCounter = 0;
 let totalCounter = 0;
 

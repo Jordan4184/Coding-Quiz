@@ -1,0 +1,38 @@
+/*Global Styling*/
+
+@font-face {
+    font-family: "SuperFesetival";
+    src: url(/font/Super\ Festival\ Personal\ Use\ copy.ttf) format('truetype');
+}
+
+body {
+    font-family: SuperFesetival;
+    background-image: url("/digital_assets/CodingQuizBackground.jpeg");
+    background-size: cover;
+}
+
+/*Title*/
+
+/*Select Subject*/
+
+/*Subject Dropdown*/
+
+/*Question Header*/
+
+/*Question*/
+
+/*Multiple Choice*/
+
+/*Submit Answer*/
+
+/*Score*/
+
+/*Correct/Incorrect*/
+
+/*Next Question*/
+
+/*Add Question Header*/
+
+/*New Question Fields*/
+
+/*Submit New Question*/
