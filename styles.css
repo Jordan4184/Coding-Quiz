@@ -11,28 +11,135 @@ body {
     background-size: cover;
 }
 
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    font-family: 'SuperFesetival';
+}
+
 /*Title*/
+#main-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4.5rem;
+    color:#73a5a8;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    
+}
 
 /*Select Subject*/
 
+#dropdown {
+    background-color: #d7573b;
+    border-radius: 50%;
+}
+
+#dropdown { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    justify-content: space-evenly;
+}
+
 /*Subject Dropdown*/
+#subject {
+    background-color: #e29e28;
+    font-size: 1.5rem;
+    border-radius: 10%;
+    width: 20%;
+}
+
+select {
+    font-family: 'SuperFesetival';
+}
 
 /*Question Header*/
+#question-topic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/*Multiple Choice Container*/
+#multiple-choice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #73a5a8;
+    border-radius: 10%;
+    padding: 30px;
+    margin: 50px;
+}
 
 /*Question*/
+#topic-question { 
+    font-size: 1.75rem;
+}
 
 /*Multiple Choice*/
 
 /*Submit Answer*/
+#submit-button{
+    background-color: #e29e28;
+    width: 75%;
+    height: 30px;
+    border-radius: 50%;
+}
 
 /*Score*/
 
 /*Correct/Incorrect*/
 
 /*Next Question*/
+#next-question {
+    background-color: #e29e28;
+    width: 75%;
+    height: 30px;
+    border-radius: 50%;
+}
 
 /*Add Question Header*/
+#add-question-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: black;
+}
+
+/*Add Question Container*/
+#new-question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e29e28;
+    border-radius: 10%;
+    padding: 30px;
+    margin: 50px;
+}
 
 /*New Question Fields*/
+#input-question {
+    background-color: ;
+}
+
+.inner-box {
+    background-color: #73a5a8;
+}
 
 /*Submit New Question*/
+#submit-new-question {
+    background-color:#d7573b;
+    width: 75%;
+    height: 30px;
+    border-radius: 50%;
+}

@@ -40,28 +40,27 @@
     <div id="main-background">
         <div id="quiz-box">
 
-            <h1>Coding Quiz</h1>
+            <h1 id="main-header">Coding Quiz</h1>
 
             <fieldset><div id="dropdown">
                 <label for="subject"><h3>Select Subject</h3></label>
 
                 <select name="subject" id="subject">
-                    <option value="#">Subject1</option>
-                    <option value="#">Subject2</option>
-                    <option value="#">Subject3</option>
-                    <option value="#">Subject4</option>
+                    <option value="Subject1">Subject1</option>
+                    <option value="Subject2">Subject2</option>
+                    <option value="Subject3">Subject3</option>
+                    <option value="Subject4">Subject4</option>
                 </select>
             </div>
             </fieldset>
             
 
-            <div id="question-topic">
-                <h2>Question Topic Place Holder</h2>
-            </div>
-
-            <form>
+            <form id="multiple-choice-container">
+                <div id="question-topic">
+                    <h2>Question Topic Place Holder</h2>
+                </div>
                 <fieldset>
-                    <legend>Topic Question</legend>
+                    <legend id="topic-question">Topic Question</legend>
                     <div id="radio-questions">
                         <input type="radio" id="choice-1" name="option" value="a">
                         <label for="choice-1">choice-1</label>
@@ -94,18 +93,18 @@
             </form>
 
             <div id="new-question">
-                <h2>Add Question</h2>
+                <h2 id="add-question-header">Add Question</h2>
                 <fieldset>
                     <div id="input-question">
-                        <input id="new-subject"> Enter Subject<br></br>
-                        <input id="add-question"> Enter Question<br></br>
-                        <input id="A"> A<br></br>
-                        <input id="B"> B<br></br>
-                        <input id="C"> C<br></br>
-                        <input id="D"> D<br></br>
-                        <input id="new-correct-answer"> Correct Answer<br></br>
+                        <input class="inner-box" id="new-subject" placeholder="Subject"> Enter Subject<br></br>
+                        <input class="inner-box" id="add-question" placeholder="Question"> Enter Question<br></br>
+                        <input class="inner-box" id="A" value="A)"> A<br></br>
+                        <input class="inner-box" id="B" value="B)"> B<br></br>
+                        <input class="inner-box" id="C" value="C)"> C<br></br>
+                        <input class="inner-box" id="D" value="D)"> D<br></br>
+                        <input class="inner-box" id="new-correct-answer" placeholder="Specify A, B, C or D"> Correct Answer<br></br>
                     </div>
-                    <button>Submit New Question</button>
+                    <button id="submit-new-question">Submit New Question</button>
                 </fieldset>
             </div>
 
