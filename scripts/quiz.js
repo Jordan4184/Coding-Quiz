@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-let practiceQuestion = new Question('JavaScript', 'This is a sample question', 'testA', 'testB','testC','testD', 'D')
+let practiceQuestion1 = new Question('JavaScript', 'This is a sample question', 'testA', 'testB','testC','testD', 'D')
+let practiceQuestion2 = new Question('Python', 'This is a sample question 2', 'testA', 'testB','testC','testD', 'B')
 
-console.log(practiceQuestion.correctAnswer('D')); // This should return "You are correct!"
-console.log(practiceQuestion.correctAnswer('A')); // This should return "Your answer is incorrect"
+masterArray.push(practiceQuestion1, practiceQuestion2);

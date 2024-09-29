@@ -81,7 +81,7 @@ select {
 
 /*Question*/
 #topic-question { 
-    font-size: 1.75rem;
+    font-size: 1.4rem;
 }
 
 /*Multiple Choice*/
@@ -128,9 +128,6 @@ select {
 }
 
 /*New Question Fields*/
-#input-question {
-    background-color: ;
-}
 
 .inner-box {
     background-color: #73a5a8;
