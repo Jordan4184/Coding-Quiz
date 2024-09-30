@@ -1,8 +1,42 @@
 
 /*Framework*/
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('#submit-button').addEventListener('click', function (event){
+        // Prevent the form from being submitted
+        event.preventDefault();
 
-/*
-Rendering Questions: Create functions to render the current question, including displaying the question text and multiple-choice options.*/
+        if(quiz.currentQuestionIndex >= masterArray.length){
+            alert('No more questions');
+            return;
+        }
+
+        let currentQuestion = masterArray[quiz.currentQuestionIndex]; 
+
+        let selectedOption = document.querySelector('input[name="option"]:checked');
+        let answer = selectedOption ? selectedOption.value : null;
+        
+        if (!answer) {
+            alert('Please select an answer before submitting.');
+            return;
+        }
+
+        let score = quiz.updateScore(answer, currentQuestion.correct_answer);
+        let result = currentQuestion.correctAnswer(answer);
+
+        console.log('answer:', answer);
+        console.log('correct answer:', currentQuestion.correct_answer);
+
+        document.getElementById('result').innerHTML = result;
+        document.getElementById('score').innerHTML = score;
+
+        document.querySelector('#submit-button').disabled = true;
+        document.querySelectorAll('input[name="option"]').forEach(option => option.disabled = true);
+        // Resets radio buttons so a new answer isnt accidentally set
+        document.querySelector('input[name="option"]:checked').checked = false;
+    });
+});
+
+// This function is used to update the UI with the current question details
 function updateQuestionUI(question){
     document.getElementById('question-topic-header').innerHTML = question.subject;
     document.getElementById('topic-question').innerHTML = question.question;
@@ -12,16 +46,37 @@ function updateQuestionUI(question){
     document.querySelector('label[for="choice-4"]').innerHTML = question.d;
 };
 
+// Add an event listener to the 'next-question' button
 document.getElementById('next-question').addEventListener('click', function (){
-    currentQuestionIndex++;
-    if(currentQuestionIndex < masterArray.length)
-        updateQuestionUI(masterArray[currentQuestionIndex]);
+    quiz.currentQuestionIndex++;
+
+    if (quiz.currentQuestionIndex < masterArray.length) {
+        updateQuestionUI(masterArray[quiz.currentQuestionIndex]);
+
+        // Reset the result display
+        document.getElementById('result').innerHTML = '';
+        
+        // Reset the selected option
+        document.querySelectorAll('input[name="option"]').forEach(option => {
+            option.checked = false;
+            option.disabled = false;
+        });
+
+        // Re-enable the submit button
+        document.querySelector('#submit-button').disabled = false;
+    } else {
+        alert('Quiz complete! ' + quiz.calculateFinalScore());
+        
+        // Optionally, disable the next question button
+        document.getElementById('next-question').disabled = true;
+    }
 });
 
-updateQuestionUI(masterArray[currentQuestionIndex]);
+// Update the UI with the first question when the page loads
+updateQuestionUI(masterArray[quiz.currentQuestionIndex]);
 
-
-/* Handling User Input: Add event listeners to capture when a user selects an answer or submits a response.
+/* 
+Handling User Input: Add event listeners to capture when a user selects an answer or submits a response.
 Displaying Feedback: Handle the display of feedback (correct/incorrect answers) and progress indicators after each question.
-Form for New Questions: Manage the form for adding new questions. Ensure the user can input the question, options, categories, and time limit, and that the form is reset after submission.
+Form for New Questions: Manage the form for adding new questions. Ensure the user can input the question, options, categories, and that the form is reset after submission
 */
